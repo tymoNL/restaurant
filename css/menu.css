@@ -64,7 +64,6 @@ main {
 .menu-item h4 {
     font-size: 1.4rem;
     margin: 0 0 0.5rem;
-    color: var(--link-color);
 }
 
 .menu-item p {

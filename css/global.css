@@ -1,8 +1,11 @@
 :root {
     --font-family: 'Quicksand', sans-serif;
 
+    --heading-color: hsl(25, 75%, 45%);
+    --heading-color-secondary: hsl(35, 85%, 60%);
+
     /* Header styles */
-    --header-background: #0a0a0a;
+    --header-background: #fafafa;
     --header-color: #fafafa;
 
     /* Footer styles */
@@ -34,6 +37,17 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     min-height: 100dvh;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -47,6 +61,8 @@ button, a[role="button"], a.button {
 
     &:hover, &:focus {
         background: var(--button-background-hover);
+        color: var(--button-color);
+        text-decoration: none;
     }
 }
 

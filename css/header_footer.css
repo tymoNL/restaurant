@@ -1,10 +1,18 @@
-header {
-    position: sticky;
-    top: 0;
+body.scrolled header {
     background-color: var(--header-background);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
     padding: 10px 0;
     text-align: center;
     color: var(--header-color);
+    transition: all 0.3s ease-out;
+    z-index: 10;
 
     .header-flexbox {
         display: flex;
@@ -59,7 +67,7 @@ header {
     }
 
     a {
-        color: var(--header-color);
+        color: var(--heading-color);
         text-decoration: none;
 
         &:hover {
@@ -68,8 +76,6 @@ header {
         }
     }
 }
-
-main {}
 
 footer {
     background-color: var(--footer-background);
@@ -120,9 +126,10 @@ footer {
     }
 
     .footerBottom {
-        background-color: var(--header-background);
+        background-color: var(--footer-background);
         text-align: center;
         margin-top: 20px;
+        border-top: 1px solid var(--footer-color);
 
         p {
             margin: 0;
