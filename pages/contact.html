@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon & Title -->
+    <title>Contact | Lichtpunt</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Font-awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/header_footer.css" />
+
+    <link rel="stylesheet" href="../css/contact.css" />
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <section class="header-flexbox">
+                <h1><a href="/">Lichtpunt</a></h1>
+
+                <a href="javascript:;" class="mobileMenuToggle" onclick="toggleMobileMenu(this);">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+
+                <nav class="mainmenu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pages/menu.html">Menukaart</a></li>
+                        <li><a href="/pages/over-ons.html">Over ons</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="contact-hero">
+                <h2>Contacteer Ons</h2>
+                <p>We kijken ernaar uit om van je te horen! Neem contact op voor reserveringen, vragen of speciale
+                    verzoeken.</p>
+            </section>
+
+            <!-- Contact Form and Info Section -->
+            <section class="contact-content">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3>Stuur Ons een Bericht</h3>
+                        <form id="contactForm" action="https://formspree.io/f/xovkrgvb" method="POST">
+                            <label>
+                                Your email:
+                                <input type="email" name="email" required>
+                            </label>
+                            <label>
+                                Your message:
+                                <textarea name="message" required></textarea>
+                            </label>
+                            <button type="submit">Send</button>
+                            <p id="status"></p>
+                        </form>
+
+                        <script>
+                            const form = document.getElementById("contactForm");
+
+                            form.addEventListener("submit", async (event) => {
+                                event.preventDefault(); // stop the normal redirect
+
+                                const status = document.getElementById("status");
+                                const data = new FormData(form);
+
+                                try {
+                                    const response = await fetch(form.action, {
+                                        method: form.method,
+                                        body: data,
+                                        headers: { 'Accept': 'application/json' }
+                                    });
+
+                                    if (response.ok) {
+                                        status.textContent = "✅ Thanks! Your message has been sent.";
+                                        form.reset();
+                                    } else {
+                                        status.textContent = "❌ Oops! There was a problem sending your message.";
+                                    }
+                                } catch (error) {
+                                    status.textContent = "❌ Network error. Please try again later.";
+                                }
+                            });
+                        </script>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Contactgegevens</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:info@restaurant.nl">info@restaurant.nl</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+123456789">+12 345 6789</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                                <a href="https://maps.app.goo.gl/3WtJKYj4RuVq8QM29" target="_blank">Straatnaam 123, 1234
+                                    AB Stad</a>
+                            </li>
+                        </ul>
+                        <h4>Volg Ons</h4>
+                        <ul class="brands">
+                            <li>
+                                <a href="#facebook" aria-label="Volg ons op Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#twitter" aria-label="Volg ons op Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#instagram" aria-label="Volg ons op Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4837.960678436057!2d4.909075476955274!3d52.678392824490345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cf54afa2471141%3A0xbf964b00daf12c89!2sDorpsstraat%20172%2C%201713%20HN%20Obdam!5e0!3m2!1snl!2snl!4v1760794986153!5m2!1snl!2snl"
+                width="100%" height="450" style="border: none; border-radius: 0.5rem;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <section class="footerFlexbox">
+
+                <nav class="footerNav">
+                    <h3>Navigatie</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pages/menu.html">Menu</a></li>
+                        <li><a href="/pages/over-ons.html">Over ons</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footerTimes">
+                    <h3>Openingstijden</h3>
+                    <ul>
+                        <li>Maa t/m vrij: 12:00 - 22:00</li>
+                        <li>Zaterdag: 12:00 - 23:00</li>
+                        <li>Zondag: 12:00 - 21:00</li>
+                    </ul>
+                </nav>
+
+                <nav class="footerContact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:info@restaurant.nl"><i class="fa-solid fa-envelope"></i>Email
+                                address</a></li>
+                        <li><a href="tel:+123456789"><i class="fa-solid fa-phone"></i>Telefoonnummer</a></li>
+                        <li><a href="https://maps.app.goo.gl/3WtJKYj4RuVq8QM29" target="_blank"><i
+                                    class="fa-solid fa-map-marker-alt"></i>Locatie</a></li>
+                    </ul>
+
+                    <ul class="brands">
+                        <li><a href="#facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/bistrotlichtpunt/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+
+        <section class="footerBottom">
+            <p>&copy; 2025 Restaurant. Alle rechten voorbehouden.</p>
+        </section>
+    </footer>
+</body>
+
+</html>
