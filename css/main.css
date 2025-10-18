@@ -18,6 +18,8 @@ main {
     img {
         filter: brightness(0.5);
         height: 100dvh;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
