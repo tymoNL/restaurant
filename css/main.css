@@ -33,7 +33,6 @@ main {
 }
 
 .hero h2 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
     margin-bottom: 1rem;
     color: var(--header-color);
 }
@@ -45,7 +44,6 @@ main {
 
 .featured-dishes h2 {
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -87,12 +85,10 @@ main {
 }
 
 .dish-card h3 {
-    font-size: 1.5rem;
     margin: 1rem 0 0.5rem;
 }
 
 .dish-card p {
-    font-size: 1rem;
     padding-inline: 1rem;
 }
 
@@ -120,12 +116,10 @@ main {
 }
 
 .about-us h2 {
-    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .about-us p {
-    font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -137,11 +131,9 @@ main {
 }
 
 .reservation-cta h2 {
-    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .reservation-cta p {
-    font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
