@@ -15,3 +15,4 @@ function toggleMobileMenu(obj) {
       document.body.classList.remove("scrolled");
     }
   });
+
