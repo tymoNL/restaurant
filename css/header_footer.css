@@ -13,6 +13,7 @@ header {
     color: var(--header-color);
     transition: all 0.3s ease-out;
     z-index: 10;
+    height: var(--header-height);
 
     .header-flexbox {
         display: flex;

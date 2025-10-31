@@ -4,10 +4,6 @@
     --heading-color: hsl(25, 75%, 45%);
     --heading-color-secondary: hsl(35, 85%, 60%);
 
-    /* Header styles */
-    --header-background: #fafafa;
-    --header-color: #fafafa;
-
     /* Footer styles */
     --footer-background: #1f1f1f;
     --footer-color: #fafafa;
@@ -22,7 +18,17 @@
     --link-color: #cc1b1b;
     --link-color-hover: #85311b;
 
+    /* View Transition */
     view-transition-name: root;
+
+    /* Header styles */
+    --header-background: #fafafa;
+    --header-color: #fafafa;
+    --header-height: 105px;
+
+    @media screen and (min-width: 768px) {
+        --header-height: 150px;
+    }
 }
 
 *,
@@ -47,7 +53,8 @@ body {
 }
 
 body:not(.homepage) main {
-    padding-top: 150px;
+    padding-top: var(--header-height);
+    background-color: #fafafa;
 }
 
 h1,

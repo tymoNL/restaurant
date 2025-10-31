@@ -1,13 +1,8 @@
-main {
-    background-color: #fafafa;
-}
-
 /* About Hero Section */
 .about-hero {
     text-align: center;
     padding: 3rem 0;
     background-color: var(--header-background);
-    color: var(--header-color);
     border-radius: 0.5rem;
     margin-bottom: 2rem;
 }
