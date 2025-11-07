@@ -1,22 +1,29 @@
 :root {
     --font-family: 'Quicksand', sans-serif;
 
-    --heading-color: hsl(25, 75%, 45%);
-    --heading-color-secondary: hsl(35, 85%, 60%);
+    --primary: hsl(15, 100%, 72%);
+    --secondary: hsl(357, 100%, 70%);
+    
+    --interactive: hsl(359, 87%, 15%);
+    --interactive-hover: hsl(359, 87%, 30%);
+
+    --heading-color:var(--primary);
+    --heading-color-secondary: var(--secondary);
 
     /* Footer styles */
     --footer-background: #1f1f1f;
     --footer-color: #fafafa;
 
     /* Button Styles */
-    --button-background: #c1853b;
+    --button-background: var(--interactive);
     --button-color: #FFFFFF;
-    --button-background-hover: #a96c2a;
+    --button-background-hover: var(--interactive-hover);
     --button-border-radius: 0.25rem;
 
     /* link styles */
-    --link-color: #cc1b1b;
-    --link-color-hover: #85311b;
+    --link-color: var(--interactive);
+    --link-color-hover: var(--interactive-hover);
+    --transition: all 0.3s ease-out;
 
     /* View Transition */
     view-transition-name: root;
@@ -106,10 +113,12 @@ a.button {
     border-radius: var(--button-border-radius);
     background: var(--button-background);
     color: var(--button-color);
+    transition: var(--transition);
 
     &:hover,
     &:focus {
         background: var(--button-background-hover);
+        border-color: var(--button-background-hover);
         color: var(--button-color);
         text-decoration: none;
     }
@@ -118,6 +127,7 @@ a.button {
 a {
     color: var(--link-color);
     text-decoration: none;
+    transition: var(--transition);
 
     &:hover,
     &:focus {

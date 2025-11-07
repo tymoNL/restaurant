@@ -1,10 +1,21 @@
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     color: var(--header-color);
     border-radius: 0.5rem;
     margin-bottom: 2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    h2 {
+        margin-bottom: 1rem;
+        color: var(--header-color);
+    }
 }
 
 .banner {
@@ -19,27 +30,14 @@
     }
 }
 
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-}
-
-.hero h2 {
-    margin-bottom: 1rem;
-    color: var(--header-color);
-}
-
 /* Featured Dishes Section */
 .featured-dishes {
     margin-bottom: 2rem;
-}
 
-.featured-dishes h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .dishes-grid {
@@ -47,10 +45,8 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
-}
 
-@media screen and (min-width: 768px) {
-    .dishes-grid {
+    @media screen and (min-width: 768px) {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -67,31 +63,35 @@
     &:hover {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
-}
 
-.dish-card img {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-out;
+    img {
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-out;
 
-    &:hover {
-        transform: scale(1.05);
+        &:hover {
+            transform: scale(1.05);
+        }
     }
-}
 
-.dish-card h3 {
-    margin: 1rem 0 0.5rem;
-}
+    .textContainer {
+        padding-inline: 1rem;
+    }
 
-.dish-card p {
-    padding-inline: 1rem;
-}
+    h3 {
+        margin: 1rem 0 0.5rem;
+    }
 
-.dish-card .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--heading-color-secondary);
-    margin-top: 0.5rem;
+    p {
+        padding-inline: 1rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--heading-color-secondary);
+        margin-top: 0.5rem;
+    }
 }
 
 .featured-dishes .button {
@@ -108,27 +108,27 @@
     background-color: var(--footer-background);
     color: var(--footer-color);
     border-radius: 0.5rem;
-}
 
-.about-us h2 {
-    margin-bottom: 1rem;
-}
+    h2 {
+        margin-bottom: 1rem;
+    }
 
-.about-us p {
-    max-width: 800px;
-    margin: 0 auto;
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
 
 /* Reservation CTA Section */
 .reservation-cta {
     text-align: center;
     padding: 2rem 0;
-}
 
-.reservation-cta h2 {
-    margin-bottom: 1rem;
-}
+    h2 {
+        margin-bottom: 1rem;
+    }
 
-.reservation-cta p {
-    margin-bottom: 1.5rem;
+    p {
+        margin-bottom: 1.5rem;
+    }
 }
