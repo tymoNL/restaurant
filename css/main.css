@@ -103,7 +103,7 @@
 /* About Us Section */
 .about-us {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-block: 2rem;
     padding: 2rem;
     background-color: var(--footer-background);
     color: var(--footer-color);
