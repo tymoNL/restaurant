@@ -27,43 +27,68 @@
     border-radius: 0.5rem;
     padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-.menu-category h3 {
+h3 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
+.gerechten summary {
+    color: var(--interactive);
+}
+
 .menu-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    width: 100%;
+    padding-top: 1rem;
 
-.menu-item {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-    border-bottom: 1px solid #eee;
-}
+    .menu-item {
+        td {
+            padding: 0.5rem 1rem;
+            border-bottom:1px solid #eee;
+        }
 
-.menu-item:last-child {
-    border-bottom: none;
-}
 
-.menu-item h4 {
-    margin: 0 0 0.5rem;
-}
+        @media screen and (max-width: 768px) {
+            border-bottom: 1px solid #eee;
+            padding: 0.75rem 0;
+            justify-content: space-between;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-areas:
+                "title price"
+                "description description";
 
-.menu-item p {
-    margin: 0 0 0.5rem;
-    color: #333;
-}
+            .menu-item-title {
+                grid-area: title;
+            }
 
-.menu-item .price {
-    font-weight: bold;
-    color: var(--header-background);
+            .menu-item-description {
+                grid-area: description;
+            }
+
+            .menu-item-price {
+                grid-area: price;
+                text-align: right;
+            }
+
+            td {
+                border: none;
+                padding: 0;
+            }
+        }
+
+        .menu-item-title {
+            font-weight: 700;
+        }
+
+        .menu-item-price {
+            color: var(--interactive);
+            text-align: right;
+            font-weight: 700;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {

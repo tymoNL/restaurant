@@ -72,43 +72,6 @@
 
 
         <div class="container">
-            <!-- Featured Dishes Section -->
-            <!--section class="featured-dishes">
-                <h2>Onze Specialiteiten</h2>
-                <div class="dishes-grid">
-                    <article class="dish-card">
-                        <div class="imageContainer">
-                            <img src="images/dishes/gegrilde-eendenborst.jpg" alt="Gegrilde Eendborst" />
-                        </div>
-                        <div class="textContainer">
-                            <h3>Gegrilde Eendborst</h3>
-                            <p>Met seizoensgroenten en truffeljus</p>
-                            <span class="price">€32</span>
-                        </div>
-                    </article>
-                    <article class="dish-card">
-                        <div class="imageContainer">
-                            <img src="images/dishes/zeevruchten-medley.jpg" alt="Zeevruchten Medley" />
-                        </div>
-                        <div class="textContainer">
-                            <h3>Zeevruchten Medley</h3>
-                            <p>Verse dagvangst met citrus en kruiden</p>
-                            <span class="price">€38</span>
-                        </div>
-                    </article>
-                    <article class="dish-card">
-                        <div class="imageContainer">
-                            <img src="images/dishes/signature-dessert.jpg" alt="Signature Dessert" />
-                        </div>
-                        <div class="textContainer">
-                            <h3>Signature Dessert</h3>
-                            <p>Huisgemaakte patisserie met seizoensfruit</p>
-                            <span class="price">€14</span>
-                        </div>
-                    </article>
-                </div>
-                <a href="menu.html" class="button">Bekijk Ons Volledige Menu</a>
-            </section -->
 
             <!-- About Us Section -->
             <section class="about-us">
@@ -198,6 +161,18 @@
             <p>&copy; 2025 Bistro 't Lichtpunt. Alle rechten voorbehouden.</p>
         </section>
     </footer>
+
+    <script>
+        ; (function (d, s, id) {
+            const el = d.getElementsByTagName(s)[0]
+            if (d.getElementById(id) || el.parentNode == null) return
+            var js = d.createElement(s)
+            js.id = id
+            js.src = 'https://sdk.zenchef.com/v1/sdk.min.js'
+            el.parentNode.insertBefore(js, el)
+        })(document, 'script', 'zenchef-sdk')
+    </script>
+    <div class="zc-widget-config" data-restaurant="381026" data-open="2000" data-lang="nl"></div>
 </body>
 
 </html>

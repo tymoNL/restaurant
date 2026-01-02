@@ -3,11 +3,11 @@
 
     --primary: hsl(15, 100%, 72%);
     --secondary: hsl(357, 100%, 70%);
-    
+
     --interactive: hsl(359, 87%, 15%);
     --interactive-hover: hsl(359, 87%, 30%);
 
-    --heading-color:var(--primary);
+    --heading-color: var(--primary);
     --heading-color-secondary: var(--secondary);
 
     /* Footer styles */
@@ -35,6 +35,10 @@
 
     @media screen and (min-width: 768px) {
         --header-height: 150px;
+    }
+
+    @supports (interpolate-size: allow-keywords) {
+        interpolate-size: allow-keywords;
     }
 }
 
@@ -103,6 +107,58 @@ img {
     display: block;
 }
 
+details {
+    transition: var(--transition);
+
+    summary {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--interactive);
+        cursor: pointer;
+        outline: none;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            color: var(--interactive-hover);
+        }
+
+        &::marker {
+            content: "";
+            justify-self: end;
+        }
+
+        &::after {
+            content: "\f078";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            transition: var(--transition);
+        }
+    }
+
+    &[open] {
+        summary {
+
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+
+::details-content {
+    transition: var(--transition);
+    height: 0;
+    overflow: clip;
+    content-visibility: visible;
+}
+
+[open]::details-content {
+    height: auto;
+}
 
 button,
 a[role="button"],
