@@ -1,11 +1,11 @@
 :root {
     --font-family: 'Quicksand', sans-serif;
 
-    --primary: hsl(15, 100%, 72%);
-    --secondary: hsl(357, 100%, 70%);
+    --primary: #ff9470;
+    --secondary: #ff666e;
 
-    --interactive: hsl(359, 87%, 15%);
-    --interactive-hover: hsl(359, 87%, 30%);
+    --interactive: #480506;
+    --interactive-hover: #8f0a0c;
 
     --heading-color: var(--primary);
     --heading-color-secondary: var(--secondary);
