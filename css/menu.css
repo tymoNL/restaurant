@@ -11,11 +11,11 @@
 
     .menu-hero h2 {
         margin-bottom: 1rem;
-    }
 
-    .menu-hero p {
-        max-width: 600px;
-        margin: 0 auto;
+        p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
     }
 
     /* Menu Content Section */
@@ -75,7 +75,6 @@
                 justify-content: space-between;
                 align-items: center;
                 display: grid;
-                grid-gap: 0.5rem 0;
                 grid-template-columns: 1fr auto;
                 grid-template-areas:
                     "title price"
@@ -91,6 +90,7 @@
 
                 .menu-item-info {
                     grid-area: description;
+                    margin: 0.5rem 0;
                 }
 
                 .menu-item-price {
@@ -116,16 +116,14 @@
         }
     }
 
-    @media screen and (min-width: 768px) {
-        .menu-content {
-            display: grid;
+    details.wijnen tr.menu-item {
+        @media screen and (max-width: 457.98px) {
             grid-template-columns: 1fr;
-            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-            gap: 2rem;
-        }
-
-        .menu-category {
-            margin-bottom: 0;
+            grid-gap: 0.25rem;
+            grid-template-areas:
+                "title"
+                "description"
+                "price";
         }
     }
 
