@@ -206,32 +206,6 @@
             <p>&copy; 2025 Bistro 't Lichtpunt. Alle rechten voorbehouden. | <a href="https://smidst-it.nl" target="_blank">ST-it</a></p>
         </section>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get("cfrm") === "send") {
-                const msg = document.getElementById("successMessage");
-                if (msg) {
-                    msg.classList.add("show");
-                    // Optional: hide again after 5 seconds
-                    setTimeout(() => msg.classList.remove("show"), 5000);
-                }
-            }
-        });
-    </script>
-
-        <script>
-        ; (function (d, s, id) {
-            const el = d.getElementsByTagName(s)[0]
-            if (d.getElementById(id) || el.parentNode == null) return
-            var js = d.createElement(s)
-            js.id = id
-            js.src = 'https://sdk.zenchef.com/v1/sdk.min.js'
-            el.parentNode.insertBefore(js, el)
-        })(document, 'script', 'zenchef-sdk')
-    </script>
-    <div class="zc-widget-config" data-restaurant="381026" data-open="2000" data-lang="nl"></div>
 </body>
 
 </html>

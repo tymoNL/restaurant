@@ -61,6 +61,8 @@ body {
     grid-template-columns: 1fr;
     min-height: 100dvh;
     font-weight: 500;
+
+    overflow: hidden;
 }
 
 body:not(.homepage) main {
@@ -227,3 +229,48 @@ html::view-transition {
 }
 
 /* View Transition Styles */
+
+.closePopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 600px;
+    z-index: 101;
+
+    .popup-content {
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-height: 80vh;
+        overflow-y: scroll;
+
+        &::after {
+            content: "";
+            position: sticky;
+            display: block;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 1)
+            );
+            pointer-events: none;
+        }
+    }
+}
+
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
